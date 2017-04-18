@@ -1,0 +1,277 @@
+	body{height:100%;min-width:700px;}
+	*{padding:0; margin:0;}
+	.clearfix:after
+	{
+		content:' ';
+		display:block;
+		visibility:hidden;
+		clear:both;
+	}
+	.top
+	{
+		padding-left:8%;
+		padding-right:8%;
+		height:8%;
+		line-height:8%;}
+	h1
+	{
+		width:5em;
+		float:left;
+		height:80px;
+		background-image:url(images/welcome.jpg);
+		background-size:contain;
+		background-repeat:no-repeat;
+	}
+	ul
+	{
+		float:right;
+		margin:0px;
+	}
+	li,a
+	{
+		text-decoration:none;
+		font-size:1em;
+		font-family:"微软雅黑";
+		color:#000;
+	}
+	.top a
+	{
+		display:inline-block;
+		height:80px;
+		line-height:80px;
+	}
+	.top a:hover
+	{
+		color:#f3d387;
+		box-sizing:border-box;
+		border-bottom:4px solid #f3d387;
+	}
+	li
+	{
+		list-style:none;
+		display:inline;
+		margin-left:24px;
+	}
+	.top_nav{}
+	.main
+	{
+		width:100%;
+		height:80%;
+		margin:0 auto;
+		background:url(images/main-back.jpg);
+		background-size:cover;
+		background-repeat:no-repeat;
+		overflow:hidden;
+	}
+	.matchThree,.tetris,.snake
+	{
+		width:100%;
+		height:100%;
+		margin-bottom:8%;
+		background-color:#fff;
+		opacity:0.7;
+		overflow:hidden;
+	}
+	.matchThree_a, .tetris_a, .snake_a
+	{
+		height:560px;
+		width:60%; 
+		background-size:contain;
+		background-repeat:no-repeat;
+	}
+	.matchThree_a
+	{
+		background-image:url(images/matchThree.png);
+		background-position:right bottom;
+		float:right;
+	}
+	.tetris_a
+	{
+		background-image:url(images/tetris.png);
+		background-position:left bottom;
+		float:left;
+	}
+	.snake_a
+	{
+		background-image:url(images/snake.png);
+		background-position:right bottom;
+		float:right;
+	}
+	#game_matchThree
+	{
+		position:relative;
+		background-color:#f8de94;
+	}
+	#game_tetris
+	{
+		position:relative;
+		opacity:0.7;
+		background-color:transparent;
+	}
+	#game_snake
+	{
+		position:relative;
+		 margin-bottom:0;
+		 opacity:0.9;
+		 background-color:transparent; 
+	}
+	@keyframes bubbleMove
+	{
+		0% {opacity: 0;}
+		100%{opacity: 1;}
+	}
+	.bubble1
+	{
+		width:20%;
+		position:absolute;
+		right:46%;
+		bottom:30%;
+		animation: bubbleMove  4s 4s infinite both;
+
+	}
+	@keyframes chickenMove
+	{
+		0% {transform:rotate(0deg);}
+		50%{transform:rotate(-10deg);}
+		100%{transform:rotate(0deg);}
+	}
+	.chicken_animate
+	{
+		width:20%;
+		position:absolute;
+		right:30%;
+		bottom:0;
+		animation: chickenMove linear 0.7s infinite;
+	}
+	@keyframes snakeMove
+	{
+		0% {bottom:-10%;}
+		25%{bottom:-9%;}
+		50%{bottom:-10%;}
+		75%{bottom:-9%;}
+		100%{bottom:-10%;}
+	}
+	.snake_animate
+	{	
+		width:40%;
+		position:absolute;
+		left:4%;
+		bottom:-10%;
+		animation: snakeMove linear 0.7s infinite;
+	}
+	@keyframes matBtnMove
+	{
+		0% {left:40%;top:0%;}
+		25%{left:32%;top:10%;}
+		50%{left:24%;top:2%;}
+		75%{left:16%;top:10%;}
+		100%{left:8%;top:2%;}
+	}
+	@keyframes matBtnMove2
+	{
+		0% {left:0%;top:10%;}
+		25%{left:7%;top:0%;}
+		50%{left:14%;top:20%;}
+		75%{left:5%;top:30%;}
+		100%{left:26%;top:50%;}
+	}
+	.matchThree_btn
+	{
+		width:26%; 
+		height:64%;
+		border:none;
+		background-color:transparent;
+		background-image:url(images/matchThree-btn-bag1.png);
+		background-size:contain;
+		background-repeat:no-repeat;
+		z-index:99; position:absolute;
+		left:8%; 
+		top:10%;
+		animation: matBtnMove linear 4s 1,
+				   matBtnMove2 linear 8s 4s infinite alternate;
+	}
+	.matchThree_btn:hover, .snake_btn:hover, .bubble1:hover
+	{
+		animation-play-state:paused;
+
+	}
+	.tetris_btn
+	{
+		width:40%;
+		height:60%;
+		border:none;
+		background-color:transparent;
+		background-image:url(images/tetris-btn-bag.png);
+		background-size:contain;
+		background-repeat:no-repeat;
+		z-index:99; position:absolute;
+		right:8%; 
+		top:16%;
+
+	}
+	@keyframes snaBtnMove
+	{
+		0% {transform:rotate(0deg);}
+		25%{transform:rotate(10deg);}
+		50%{transform:rotate(0deg);}
+		75%{transform:rotate(10deg);}
+		100%{transform:rotate(0deg);}
+	}
+	.snake_btn
+	{
+		width:20%; 
+		height:30%;
+		border:none;
+		background-color:transparent;
+		background-image:url(images/button-bag.png);
+		background-size:contain;
+		background-repeat:no-repeat;
+		position:absolute;
+		left:8%;
+		bottom:66%;
+		z-index:99;
+		animation: snaBtnMove linear 0.7s infinite;
+	}
+
+	.footer
+	{
+		height:120px;
+		background-color:#556B2F;
+		padding-top:80px;
+	}
+	.footer_wrap
+	{
+		width:50%;
+		height:50%;
+		margin:0 auto;
+	}
+	.code
+	{
+		height:90%;
+		width:20%;
+		margin-left:0 auto;
+		float:left;
+	}
+	.github,.weixin
+	{
+		display:block;
+		height:100%;
+		width:40%;
+		background-repeat:no-repeat;
+		background-size:contain;
+		float:right;
+	}
+	.github
+	{
+		background-image:url(images/github.png);
+	}
+	.weixin
+	{
+		background-image:url(images/weixin.png);
+	}
+	.contact
+	{
+		float:right;margin-left:20px;
+		font-family:"微软雅黑";
+		color:#000;
+	}
